@@ -13,7 +13,7 @@ jobs:
           repository: sleepduetto/actions-test-one
           clean: false
           ref: main
-          sparse-checkout: src
+          sparse-checkout: some
 
       - name: list files
         run: "ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
