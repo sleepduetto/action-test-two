@@ -1,7 +1,7 @@
 name: actions checkout sparse test
 on: [push]
 jobs:
-  test:
+  test_job:
     runs-on: ubuntu-latest
     steps:
       - name: checkout source
@@ -14,6 +14,6 @@ jobs:
           clean: false
           ref: main
           sparse-checkout: some
-
-       - name: list files
-         run: ls -R
+          
+      - name: list files
+        run: ls -R
