@@ -16,4 +16,4 @@ jobs:
           sparse-checkout: some
           
       - name: list files
-        run: ls -R
+        run: find ./
