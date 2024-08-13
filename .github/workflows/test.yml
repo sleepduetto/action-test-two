@@ -7,6 +7,9 @@ jobs:
       - name: checkout source
         uses: actions/checkout@v4
 
+      - name: list files before sparse checkout
+        run: find ./ -not -path "./.git/*"
+
       - name: checkout other repo
         uses: actions/checkout@v4
         with:
@@ -15,5 +18,5 @@ jobs:
           ref: main
           sparse-checkout: some
           
-      - name: list files
-        run: find ./
+      - name: list files after sparse checkout
+        run: find ./ -not -path "./.git/*"
