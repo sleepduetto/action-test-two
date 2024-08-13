@@ -19,4 +19,4 @@ jobs:
           sparse-checkout: some
           
       - name: list files after sparse checkout
-        run: find ./ -not -type f -path "./.git/*"
+        run: find ./ -type f -not -path "./.git/*"
