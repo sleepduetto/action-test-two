@@ -14,5 +14,5 @@ jobs:
           clean: false
           ref: main
           sparse-checkout: some
-      - name: list files
-        run: "ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+      # - name: list files
+      #   run: "ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
