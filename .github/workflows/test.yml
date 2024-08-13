@@ -1,0 +1,19 @@
+name: actions checkout sparse test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout source
+        uses: actions/checkout@v4
+
+      - name: checkout other repo
+        uses: actions/checkout@v4
+        with:
+          repository: sleepduetto/actions-test-one
+          clean: false
+          ref: main
+          sparse-checkout: src
+
+      - name: list files
+        run: "ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
