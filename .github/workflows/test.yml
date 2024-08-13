@@ -10,7 +10,7 @@ jobs:
       - name: checkout other repo
         uses: actions/checkout@v4
         with:
-          repository: sleepduetto/actions-test-one
+          repository: sleepduetto/action-test-one
           clean: false
           ref: main
           sparse-checkout: some
